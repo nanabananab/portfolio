@@ -222,7 +222,12 @@
 
             /* Tablet Styles */
         @media (min-width: 401px) and (max-width: 960px) {
-            body, .page, .panel {
+
+            body,  .page, .panel{
+                width: 100vw;
+         
+            }
+            .page {
                 background-color: blue;
             }
 
@@ -249,7 +254,11 @@
         @media (max-width: 400px) {
         body,  .page, .panel{
                 width: 100vw;
-                background-color: red;
+         
+            }
+
+            .page {
+                background-color: blue;
             }
             #welcome-section {
                 grid-template-columns: 20% 2fr;
