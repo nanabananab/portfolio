@@ -100,7 +100,7 @@
             grid-row-end: 10;
             width: 100%;
             height: 100%;
-            font-size: calc(16px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+            font-size: calc(16px + (19 - 18) * ((100vw - 300px) / (1600 - 300)));
             
         }
         #contact-p {
@@ -222,6 +222,9 @@
 
             /* Tablet Styles */
         @media (min-width: 401px) and (max-width: 960px) {
+            body, .page, .panel {
+                background-color: blue;
+            }
 
             .details {
             grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
@@ -244,7 +247,7 @@
 
         /* Mobile Styles */
         @media (max-width: 400px) {
-        body,  page, panel{
+        body,  .page, .panel{
                 width: 100vw;
                 background-color: red;
             }
