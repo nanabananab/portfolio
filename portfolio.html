@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8' />
     <title>Natalia's Personal Portfolio</title>
@@ -38,10 +39,11 @@
             scroll-behavior: smooth;
         }
 
-        body *{
+        body * {
             color: var(--text-color);
-           
+
         }
+
         .page {
             display: grid;
             grid-template-rows: 10% 1fr;
@@ -75,14 +77,15 @@
 
         }
 
-   
+
         #welcome-section {
             display: grid;
             grid-template-columns: 1fr 700px 1fr;
             grid-template-rows: auto;
-    
+
             grid-column-gap: 60px;
         }
+
         #avatar-img {
             width: 100%;
             object-fit: cover;
@@ -93,6 +96,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
             margin: 10px;
         }
+
         #cv {
             grid-column-start: 2;
             grid-column-end: 3;
@@ -101,12 +105,9 @@
             width: 100%;
             height: 100%;
             font-size: calc(16px + (19 - 18) * ((100vw - 300px) / (1600 - 300)));
-            
+
         }
-        #contact-p {
-            font-size: 19px;
-            padding: 5px;
-        }
+
 
         #cv ul {
             margin-left: 20px;
@@ -137,9 +138,11 @@
             align-items: center;
             flex-direction: column;
         }
+
         .menu-link a {
             font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300))) !important;
         }
+
         #navbar {
             background: var(--dark-pink);
             display: flex;
@@ -148,6 +151,7 @@
             line-height: 2em;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
+
         #navbar a {
             font-weight: bold;
             margin: 0px;
@@ -155,6 +159,7 @@
             transition: .3s;
             text-decoration: none;
         }
+
         #cv h3 {
             margin-top: 20px;
 
@@ -163,86 +168,94 @@
         #contact h2 {
             margin-bottom: 70px;
         }
+
         #projects-wraper {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             justify-items: center;
             grid-gap: 25px 25px;
-          
-       } 
-       #projects {
+
+        }
+
+        #projects {
             margin: 0 auto;
             max-width: 700px;
-       }
-       .project {
-           display: block;
-           width: 200px;
-           height: 235px;    
-       }
-
-       .project-image{
-          width: 200px;
-          height: 200px;
-          display: block;
-          object-fit: cover;
-          border-radius: 4px 4px 0px 0px;
         }
-  
 
-        
+        .project {
+            display: block;
+            width: 200px;
+            height: 235px;
+        }
+
+        .project-image {
+            width: 200px;
+            height: 200px;
+            display: block;
+            object-fit: cover;
+            border-radius: 4px 4px 0px 0px;
+        }
+
+
+
         .project-title {
             background-color: var(--green);
             color: var(--pink);
             width: 200px;
             height: 35px;
-            border-radius: 0px 0px 4px 4px; 
+            border-radius: 0px 0px 4px 4px;
             font-size: 16px;
             display: flex;
             flex-direction: row;
             justify-content: center;
-            align-items: center;	
+            align-items: center;
             font-weight: bold;
         }
-        .project-link, .link-label {
+
+        .project-link,
+        .link-label {
             text-decoration: none;
         }
 
         .fa-spin-hover:hover {
             animation: fa-spin 2s infinite linear;
         }
-   
+
         .contact-label {
             font-size: 20px;
         }
-       
 
-            /* Tablet Styles */
-      
+
+        /* Tablet Styles */
+
         @media (min-width: 401px) and (max-width: 960px) {
 
-            body,  .page, .panel{
+            body,
+            .page,
+            .panel {
                 width: 100vw;
-         
+
             }
-        
+
 
             .details {
-            grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+                grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
             }
 
             #welcome-section {
                 max-width: 95%;
-                grid-template-columns: 30% 2fr ;
+                grid-template-columns: 30% 2fr;
                 grid-column-gap: 10px;
             }
+
             #cv {
-            grid-column-start: 2;
-            grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 10;
-            padding-left: 10px;
-            padding-right: 10px;
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 10;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
 
@@ -254,96 +267,102 @@
             }
 
         }
+
         @media (max-width: 400px) {
-        body,  .page, .panel{
+
+            body,
+            .page,
+            .panel {
                 width: 100vw;
-         
+
             }
 
             .page {
                 background-color: red;
             }
+
             #welcome-section {
                 grid-template-columns: 20% 2fr;
                 grid-template-rows: 180px 1fr;
                 grid-gap: 10px;
                 grid-row-gap: 0px;
-         
+
             }
+
             .details {
                 width: 95vw;
                 margin: 0 auto;
             }
+
             #cv {
-            grid-column-start: 1;
-            grid-column-end: 4;
-            grid-row-start: 2;
-            grid-row-end: 3;
-            padding-left: 10px;
-            padding-right: 10px;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3;
+                padding-left: 10px;
+                padding-right: 10px;
             }
+
             #avatar-wraper {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            height: 180px;
+                grid-column-start: 1;
+                grid-column-end: 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                height: 180px;
             }
+
             .details {
-            grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+                grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
             }
 
             #welcome-section {
                 grid-row-start: 1;
                 grid-row-end: 3;
             }
-          .subpanel {
-        
-            scroll-snap-stop: proximity;
 
-             } 
-             
-                   
+            .subpanel {
+
+                scroll-snap-stop: proximity;
+
+            }
+
+
         }
-        @media (min-height: 601px)  {
+
+        @media (min-height: 601px) {
             #cv {
                 font-size: 30px;
             }
 
             .contact-label {
-            font-size: 30px;
+                font-size: 30px;
             }
-            #contact-p {
-            font-size: 30px;
-            padding: 10px;
-        }
 
         }
+
         @media (min-height: 401px) and (max-height: 600px) {
             .page {
                 background-color: blue;
             }
 
             .project {
-             height: 160px;  
+                height: 160px;
             }
 
             #projects-wraper {
-            grid-gap: 20px 15px;
+                grid-gap: 20px 15px;
             }
 
-            .project-image{
+            .project-image {
                 height: 125px;
-        
+
             }
+
             #projects {
                 height: 90%;
             }
 
         }
-
-      
-        
     </style>
 </head>
 
@@ -352,7 +371,7 @@
         <nav id="navbar" class="panel">
             <div class="menu-link"><a href="#welcome-section"><span>About</span></a></div>
             <div class="menu-link"><a href="#projects"><span>Work</span></a></div>
-            <div class="menu-link" ><a href="#contact"><span>Contact</span></a></div>
+            <div class="menu-link"><a href="#contact"><span>Contact</span></a></div>
         </nav>
 
         <div class="details panel">
@@ -367,9 +386,12 @@
                 </header>
 
                 <div id="cv">
-                  
-                    <p>I was born in 2009 and at the age of 9 I started learning computer programming. I am learning computer programming because it is my passion, I love to code, and create new applications.The other reason is that I need no university for that and I am going to be able to make all fun apps, webpages and animations of my dreams!!!</p>
-                    
+
+                    <p>I was born in 2009 and at the age of 9 I started learning computer programming. I am learning
+                        computer programming because it is my passion, I love to code, and create new applications.The
+                        other reason is that I need no university for that and I am going to be able to make all fun
+                        apps, webpages and animations of my dreams!!!</p>
+
                     <h2>Technologies</h2>
                     <ul id="skill-list">
                         <li>JavaScript: ES6, Processing JS,</li>
@@ -387,12 +409,14 @@
                 <h2 id="work">These are my projects</h2>
                 <div id="projects-wraper">
                     <div class="project">
-                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/wvwOBjE" target="_blank" >
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/wvwOBjE" target="_blank">
                             <figure class="fig-img">
-                                <img class="project-image" src="https://screenshot.codepen.io/3538753.wvwOBjE.fe0a49df-3dc3-44f6-9b81-103972641930.png" alt="project">
+                                <img class="project-image"
+                                    src="https://screenshot.codepen.io/3538753.wvwOBjE.fe0a49df-3dc3-44f6-9b81-103972641930.png"
+                                    alt="project">
                                 <figcaption class="project-title">
 
-                                    Book Reviews 
+                                    Book Reviews
 
                                 </figcaption>
                             </figure>
@@ -400,59 +424,73 @@
                     </div>
                     <div class="project">
                         <a class="project-link" href="https://codepen.io/my_mangosteen/full/dybxjmJ" target="_blank">
-                                <figure class="fig-img">
-                                    <img class="project-image" src="https://screenshot.codepen.io/3538753.dybxjmJ.b6bf85a8-9250-4f75-a7b0-0b30f3547235.png" alt="project">
-                                    <figcaption class="project-title">
-    
-                                        HTML Basics
-    
-                                    </figcaption>
-                                </figure>
-                            </a>
-                    </div>
-                    <div class="project">
-                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/XWreQxz" target="_blank" >
                             <figure class="fig-img">
-                                <img class="project-image" src="https://screenshot.codepen.io/3538753.XWreQxz.528a6e5c-ddf9-400b-84f3-af62b1c32a63.png" alt="project">
+                                <img class="project-image"
+                                    src="https://screenshot.codepen.io/3538753.dybxjmJ.b6bf85a8-9250-4f75-a7b0-0b30f3547235.png"
+                                    alt="project">
                                 <figcaption class="project-title">
 
-                                    Book & Movie Survey  
+                                    HTML Basics
 
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="project">
-                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/mdbMKEE" target="_blank" >
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/XWreQxz" target="_blank">
                             <figure class="fig-img">
-                                <img class="project-image" src="https://screenshot.codepen.io/3538753.mdbMKEE.5495492e-f746-4647-a762-5ce5c0ef9b81.png" alt="project">
+                                <img class="project-image"
+                                    src="https://screenshot.codepen.io/3538753.XWreQxz.528a6e5c-ddf9-400b-84f3-af62b1c32a63.png"
+                                    alt="project">
                                 <figcaption class="project-title">
 
-                                    Harry Potter  
+                                    Book & Movie Survey
 
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="project">
-                        <a class="project-link" href="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080" target="_blank" >
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/mdbMKEE" target="_blank">
                             <figure class="fig-img">
-                                <img class="project-image" src="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080/5761206135914496.png" alt="project">
+                                <img class="project-image"
+                                    src="https://screenshot.codepen.io/3538753.mdbMKEE.5495492e-f746-4647-a762-5ce5c0ef9b81.png"
+                                    alt="project">
                                 <figcaption class="project-title">
 
-                                    Kaleidoscope 
+                                    Harry Potter
 
                                 </figcaption>
                             </figure>
                         </a>
                     </div>
                     <div class="project">
-                        <a class="project-link" href="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912" target="_blank" >
+                        <a class="project-link"
+                            href="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080"
+                            target="_blank">
                             <figure class="fig-img">
-                                <img class="project-image" src="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912/6387914281156608.png" alt="project">
+                                <img class="project-image"
+                                    src="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080/5761206135914496.png"
+                                    alt="project">
                                 <figcaption class="project-title">
 
-                                    Animal Attack   
+                                    Kaleidoscope
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link"
+                            href="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912"
+                            target="_blank">
+                            <figure class="fig-img">
+                                <img class="project-image"
+                                    src="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912/6387914281156608.png"
+                                    alt="project">
+                                <figcaption class="project-title">
+
+                                    Animal Attack
 
                                 </figcaption>
                             </figure>
@@ -462,34 +500,34 @@
             </section>
             <footer id="contact" class="subpanel">
                 <h2>Contact</h2>
-                <p id="contact-p">Choose a way to stay in touch</p>
-                    <a class="link-label" target="_blank" href="mailto:https://mail.google.com/mail/u/0/?pli=1#inbox">
+                <a class="link-label" target="_blank" href="mailto:https://mail.google.com/mail/u/0/?pli=1#inbox">
                     <i class="fa fa-envelope fa-2x fa-spin-hover"></i>
                     <span class="contact-label">bananataliab@gmail.com</span>
-                    </a>
-                    <br>
-                    <a class="link-label" target="_blank" href="https://github.com/nanabananab?tab=repositories">
-                        <i class="fa fa-github fa-2x fa-spin-hover"></i>
-                        <span class="contact-label">Github</span>
-                    </a>
-                    <br>
-                    <a class="link-label" target="_blank" href="https://learn.freecodecamp.org/">
-                        <i class="fa fa-free-code-camp fa-2x fa-spin-hover"></i>
-                        <span class="contact-label" >FreeCodeCamp</span>
-                    </a>
-                    <br>
-                    <a class="link-label" target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
-                        <i class="fa fa-spin-hover">
-                            <img id="khan-academy-img" style="width: 40px; float: left; border-radius: 50px;" src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
-                        </i>
-                        <span class="contact-label" id="khan-academy-label">Khan Academy</span>
-                    </a>
+                </a>
+                <br>
+                <a class="link-label" target="_blank" href="https://github.com/nanabananab?tab=repositories">
+                    <i class="fa fa-github fa-2x fa-spin-hover"></i>
+                    <span class="contact-label">Github</span>
+                </a>
+                <br>
+                <a class="link-label" target="_blank" href="https://learn.freecodecamp.org/">
+                    <i class="fa fa-free-code-camp fa-2x fa-spin-hover"></i>
+                    <span class="contact-label">FreeCodeCamp</span>
+                </a>
+                <br>
+                <a class="link-label" target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
+                    <i class="fa fa-spin-hover">
+                        <img id="khan-academy-img" style="width: 40px; float: left; border-radius: 50px;"
+                            src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
+                    </i>
+                    <span class="contact-label" id="khan-academy-label">Khan Academy</span>
+                </a>
             </footer>
         </div>
         <!--details-->
     </div>
     <!--page-->
-   
+
 </body>
 
 </html>
