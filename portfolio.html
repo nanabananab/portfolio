@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap');
+      @font-face {
+            font-family: 'Roboto';
+            src: url('Roboto-Light-webfont.woff') format('woff');
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('Roboto-LightItalic-webfont.woff') format('woff');
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'Roboto';
+            src: url('Roboto-Bold-webfont.woff') format('woff');
+            font-style: normal;
+            font-weight: 700;
+        }
+      * {  
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body{
+        overflow:hidden;
+        margin: 0;
+        --background-color: rgb(252, 250, 248);
+        --text-color: #374A12;
+        --nav-background: #F87375;
+        --project-background:#374A12;
+        --project-text: rgb(226, 171, 155);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        font-size: 100%;
+        font-family: 'Roboto', sans-serif;
+      }
+      h1, h2, figcaption, .nav-link {
+        font-family: 'Mystery Quest', cursive;
+      }
+
+      #navbar {
+        width: 100vw;
+        height: 80px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--nav-background);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      .nav-link {
+        padding: 5px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .nav-link a {
+        color: var(--text-color);
+      }
+      #portfolio {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: calc(100vh - 80px);
+      }
+      #welcome-section{
+        display: grid;
+        grid-template-columns: 1fr 700px 1fr;
+      }
+      #avatar img{
+        width:235px;
+        border-radius: 50%;
+        border-width: 9px;
+        border-style: solid;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+      }
+      #projects-wraper {
+        max-width: 700px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 0;
+        grid-gap: 20px;
+        justify-items: center;
+        align-items: center;
+      }
+      .project {
+        margin: 0;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      }
+      .project img {
+        object-fit: cover;
+        display: block;
+        width: 210px;
+        height: 200px;
+        border-radius: 5px 5px 0px 0px;
+      }
+      .project figcaption {
+        padding: 5px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 0px 0px 5px 5px;
+        color: var(--project-text);
+        background-color: var(--project-background);
+      }
+      .prortfolio-section {
+        height: calc(100vh - 80px);
+        overflow: visible;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+      #contact-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #contact-header{
+        height: 50px;
+      }
+      #contact-text {
+        height: 25px;
+        font-size: 18px;
+      }
+      #contact-list {
+        display: flex;
+        justify-content: center;
+        }
+      .contact-link {
+        font-size: 25px;
+        padding: 20px;
+        
+      }
+      .contact-link a{
+        color: var(--text-color);
+      }
+      .fa-spin-hover:hover {
+            animation: fa-spin 2s infinite linear;
+      }
+      #khan-academy-img {
+        width: 30px;
+        float: left; 
+        border-radius: 50px;
+      }
+      h1 {
+        text-align: center;
+      }
+      #projects-heading {
+        text-align: center;
+        padding-top: 20px;
+      }
+
+     .zoom {
+      transition: transform .2s; /* Animation */
+    }
+
+    .zoom:hover {
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    .hover:hover {
+      color: var(--background-color);
+    }
+    a {
+      text-decoration: none;
+    }
+    
+    </style>
+  </head>
+  <body>
+      <nav id="navbar">
+        <div class="nav-link zoom">
+          <a class="hover" href="#welcome-section">About</a>
+        </div>
+        <div class="nav-link zoom">
+          <a class="hover" href="#projects">Work</a>
+        </div>
+        <div class="nav-link zoom">
+          <a class="hover" href="#contact-section">Contact</a>
+        </div>
+      </nav>
+      <main id="portfolio">
+        <section id="welcome-section" class="prortfolio-section">
+          <figure id="avatar">
+            <img src="https://raw.githubusercontent.com/nanabananab/portfolio/master/avatar_Natalia_new.png" alt="avatar" width="235px">
+          </figure>
+          <div id="cv">
+            <h1>Hello, I am Natalia</h1>
+            <p>I was born in 2009 and at the age of 9 I started learning computer programming. I am learning computer programming because it is my passion, I love to code, and create new applications.The other reason is that I need no university for that and I am going to be able to make all fun apps, webpages and animations of my dreams!!!</p>
+            <h2>Technologies</h2>
+            <ul>
+              <li>JavaScript: ES6, Processing JS,</li>
+              <li>HTML: HTML5,</li>
+              <li>CSS: CSS Flexbox, CSS Grid,</li>
+              <li>Responsive Web Design Principles.</li>
+            </ul>
+            <h2>Foreign Lenguages</h2>
+            <p>I am fluent in English, Spanish and Polish.</p>
+            <h2>Hobbies</h2>
+            <ul>
+              <li>Dancing</li>
+              <li>Cycling</li>
+              <li>Drawing</li>
+              <li>Swimming</li>
+              <li>Coding</li>
+              <li>Writing</li>
+            </ul>
+          </div>
+        </section>
+        <section id="projects" class="prortfolio-section">
+          <h2 id="projects-heading">These are my projects</h2>
+          <div id="projects-wraper">
+            <a href="">
+              <figure class="project zoom">
+                <img src="https://screenshot.codepen.io/3538753.wvwOBjE.fe0a49df-3dc3-44f6-9b81-103972641930.png" alt="project-image">
+                <figcaption class="hover">Book Reviews</figcaption>
+              </figure>
+            </a>
+            <a href="">
+            <figure class="project zoom">
+              <img src="https://screenshot.codepen.io/3538753.dybxjmJ.b6bf85a8-9250-4f75-a7b0-0b30f3547235.png" alt="project-image">
+              <figcaption class="hover">HTML Basics</figcaption>
+            </figure>
+          </a>
+          <a href="">
+            <figure class="project zoom">
+              <img src="https://screenshot.codepen.io/3538753.XWreQxz.528a6e5c-ddf9-400b-84f3-af62b1c32a63.png" alt="project-image">
+              <figcaption class="hover">Book & Movie Survey</figcaption>
+            </figure>
+          </a>
+          <a href="">
+            <figure class="project zoom">
+              <img src="https://screenshot.codepen.io/3538753.mdbMKEE.5495492e-f746-4647-a762-5ce5c0ef9b81.png" alt="project-image">
+              <figcaption class="hover">Harry Potter</figcaption>
+            </figure>
+          </a>
+          <a href="">
+            <figure class="project zoom">
+              <img src="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080/5761206135914496.png" alt="project-image">
+              <figcaption class="hover">Kaleidoscope</figcaption>
+            </figure>
+          </a>
+          <a href="">
+            <figure class="project zoom">
+              <img src="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912/6387914281156608.png" alt="project-image">
+              <figcaption class="hover">Animal Attack</figcaption>
+            </figure>
+          </a>
+        </div>
+        </section>
+        <section id="contact-section" class="prortfolio-section">
+          <h2 id="contact-header">Contact</h2>
+          <p id="contact-text">Choose a way to stay in touch</p>
+          <div id="contact-list"> 
+            <div class="contact-link zoom">
+              <a href="mailto:https//mail.google.com/mail/u/0/?pli=1#inbox">
+                <i class="fa fa-envelope fa-spin-hover"></i>
+                bananataliab@gmail.com
+              </a>
+            </div>
+            <div class="contact-link zoom">
+              <a href="https://github.com/nanabananab?tab=repositories">
+                <i class="fa fa-github fa-spin-hover"></i>
+                Github
+              </a>
+            </div>
+            <div class="contact-link zoom">
+              <a href="https://learn.freecodecamp.org/">
+                <i class="fa fa-free-code-camp fa-spin-hover"></i>
+                FreeCodeCamp
+            </a>
+          </div>
+          <div class="contact-link zoom">
+            <a  target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
+              <i class="fa">
+                <span id="khan-academy-label">
+                  <img id="khan-academy-img" class="fa fa-spin-hover" src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
+                  Khan Academy
+                </span>
+                </i>
+            </a>
+          </div>
+          </div>
+        </section>
+      </main>
+
+  </body>
+</html>
