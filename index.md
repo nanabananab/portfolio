@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Natalia's Photos</title>
+    <script src="https://kit.fontawesome.com/d54a45813e.js"></script>
+    <link rel="stylesheet" type="text/css" href="photos.css">
+    
+</head>
+
+<body>
+    <nav id="navbar" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="nav-link">
+            <a class="nav-link" href="#home">
+                <i class="fas fa-home fa-spin-hover"></i>
+                <span>Home</span>
+            </a>
+        </div>
+        <div class="nav-link">
+            <a href="#plants-section" onclick="closeNav(); closeModal()">
+                <i class="fab fa-pagelines fa-spin-hover"></i>
+                Plants
+            </a>
+        </div>
+        <div class="nav-link">
+            <a href="#fruits-section" onclick="closeNav(); closeModal()">
+                <i class="fas fa-apple-alt fa-spin-hover"></i>
+                Fruits
+            </a>
+        </div>
+        <div class="nav-link">
+            <a href="#animals-section" onclick="closeNav(); closeModal()">
+                <i class="fas fa-frog fa-spin-hover"></i>
+                Animals</a>
+        </div>
+        <div class="nav-link">
+            <a href="#food-section" onclick="closeNav(); closeModal()">
+                <i class="fas fa-utensils fa-spin-hover"></i>
+                Food
+            </a>
+        </div>
+    </nav>
+    <main id="main">
+        <div id="menu-open" onclick="openNav()">&#9776; Menu</div>
+        <section class="page" id="plants-section">
+
+            <img class="photo big-photo rotate25 photo-1" onclick="openModal(); currentSlide(1)"
+                src="photos/Plants/photo1_1.jpg"
+                alt="Photo of Natalia">
+            <img class="photo medium-photo rotate20 photo-2" onclick="openModal(); currentSlide(2)"
+                src="photos/Plants/photo1_2.jpg"
+                alt="Photo of a blue butterfly">
+            <img class="photo medium-photo rotate-10 photo-3" onclick="openModal(); currentSlide(3)"
+                src="photos/Plants/photo1_3.jpg"
+                alt="Photo of acerolas">
+            <img class="photo big-photo rotate20 photo-4" onclick="openModal(); currentSlide(4)"
+                src="photos/Plants/photo1_4.jpg"
+                alt="Photo of pineapples">
+            <img class="photo small-photo rotate-20 photo-5" onclick="openModal(); currentSlide(5)"
+                src="photos/Plants/photo1_5.jpg"
+                alt="Photo of large pumpkins">
+            <img class="photo medium-photo rotate-20 photo-6" onclick="openModal(); currentSlide(6)"
+                src="photos/Plants/photo1_6.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-7" onclick="openModal(); currentSlide(7)"
+                src="photos/Plants/photo1_7.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="move-up photo big-photo rotate10 photo-8" onclick="openModal(); currentSlide(8)"
+                src="photos/Plants/photo1_8.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo medium-photo rotate-10 photo-9" onclick="openModal(); currentSlide(9)"
+                src="photos/Plants/photo1_9.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate-10 photo-10" onclick="openModal(); currentSlide(10)"
+                src="photos/Plants/photo1_10.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-11" onclick="openModal(); currentSlide(11)"
+                src="photos/Plants/photo1_11.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo big-photo rotate-10 photo-12" onclick="openModal(); currentSlide(12)"
+                src="photos/Plants/photo1_12.jpg"
+                alt="Photo of a beautiful bug">
+        </section>
+        <section class="page" id="fruits-section">1
+            <img class="photo big-photo rotate15 photo-1" onclick="openModal(); currentSlide(13)"
+                src="photos/Fruits/photo2_1.jpg"
+                alt="Photo of Natalia">
+            <img class="photo medium-photo rotate-20 photo-2" onclick="openModal(); currentSlide(14)"
+                src="photos/Fruits/photo2_2.jpg"
+                alt="Photo of a blue butterfly">
+            <img class="photo medium-photo rotate10 photo-3" onclick="openModal(); currentSlide(15)"
+                src="photos/Fruits/photo2_3.jpg"
+                alt="Photo of acerolas">
+            <img class="photo big-photo rotate20 photo-4" onclick="openModal(); currentSlide(16)"
+                src="photos/Fruits/photo2_4.jpg"
+                alt="Photo of pineapples">
+            <img class="photo small-photo rotate-20 photo-5" onclick="openModal(); currentSlide(17)"
+                src="photos/Fruits/photo2_5.jpg"
+                alt="Photo of large pumpkins">
+            <img class="photo medium-photo rotate-20 photo-6" onclick="openModal(); currentSlide(18)"
+                src="photos/Fruits/photo2_6.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-7" onclick="openModal(); currentSlide(19)"
+                src="photos/Fruits/photo2_7.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="move-up photo big-photo rotate-10 photo-8" onclick="openModal(); currentSlide(20)"
+                src="photos/Fruits/photo2_8.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo medium-photo rotate10 photo-9" onclick="openModal(); currentSlide(21)"
+                src="photos/Fruits/photo2_9.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate-10 photo-10" onclick="openModal(); currentSlide(22)"
+                src="photos/Fruits/photo2_10.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-11" onclick="openModal(); currentSlide(23)"
+                src="photos/Fruits/photo2_11.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo big-photo rotate10 photo-12" onclick="openModal(); currentSlide(24)"
+                src="photos/Fruits/photo2_12.jpg"
+                alt="Photo of a beautiful bug">
+        </section>
+        <section class="page" id="animals-section">
+            <img class="photo big-photo rotate15 photo-1" onclick="openModal(); currentSlide(25)"
+                src="photos/Animals/photo3_1.jpg" alt="">
+            <img class="photo medium-photo rotate-20 photo-2" onclick="openModal(); currentSlide(26)"
+                src="photos/Animals/photo3_2.jpg" alt="">
+            <img class="photo medium-photo rotate10 photo-3" onclick="openModal(); currentSlide(27)"
+                src="photos/Animals/photo3_3.jpg" alt="">
+            <img class="photo big-photo rotate20 photo-4" onclick="openModal(); currentSlide(28)"
+                src="photos/Animals/photo3_4.jpg" alt="">
+            <img class="photo small-photo rotate-20 photo-5" onclick="openModal(); currentSlide(29)"
+                src="photos/Animals/photo3_5.jpg" alt="">
+            <img class="photo medium-photo rotate-20 photo-6" onclick="openModal(); currentSlide(30)"
+                src="photos/Animals/photo3_6.jpg" alt="">
+            <img class="photo small-photo rotate15 photo-7" onclick="openModal(); currentSlide(31)"
+                src="photos/Animals/photo3_7.jpg" alt="">
+            <img class="move-up photo big-photo rotate-10 photo-8" onclick="openModal(); currentSlide(32)"
+                src="photos/Animals/photo3_8.jpg" alt="">
+            <img class="photo medium-photo rotate10 photo-9" onclick="openModal(); currentSlide(33)"
+                src="photos/Animals/photo3_9.jpg" alt="">
+            <img class="photo small-photo rotate10 photo-10" onclick="openModal(); currentSlide(34)"
+                src="photos/Animals/photo3_10.jpg" alt="">
+            <img class="photo small-photo rotate-15 photo-11" onclick="openModal(); currentSlide(35)"
+                src="photos/Animals/photo3_11.jpg" alt="">
+            <img class="photo big-photo rotate10 photo-12" onclick="openModal(); currentSlide(36)"
+                src="photos/Animals/photo3_12.jpg" alt="">
+        </section>
+        <section class="page" id="food-section">
+            <img class="photo big-photo rotate15 photo-1" onclick="openModal(); currentSlide(37)"
+                src="photos/Food/photo4_1.jpg"
+                alt="Photo of Natalia">
+            <img class="photo medium-photo rotate-20 photo-2" onclick="openModal(); currentSlide(38)"
+                src="photos/Food/photo4_2.jpg"
+                alt="Photo of a blue butterfly">
+            <img class="photo medium-photo rotate10 photo-3" onclick="openModal(); currentSlide(39)"
+                src="photos/Food/photo4_3.jpg"
+                alt="Photo of acerolas">
+            <img class="photo big-photo rotate20 photo-4" onclick="openModal(); currentSlide(40)"
+                src="photos/Food/photo4_4.jpg"
+                alt="Photo of pineapples">
+            <img class="photo small-photo rotate-20 photo-5" onclick="openModal(); currentSlide(41)"
+                src="photos/Food/photo4_5.jpg"
+                alt="Photo of large pumpkins">
+            <img class="photo medium-photo rotate-20 photo-6" onclick="openModal(); currentSlide(42)"
+                src="photos/Food/photo4_6.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-7" onclick="openModal(); currentSlide(43)"
+                src="photos/Food/photo4_7.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="move-up photo big-photo rotate-10 photo-8" onclick="openModal(); currentSlide(44)"
+                src="photos/Food/photo4_8.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo medium-photo rotate10 photo-9" onclick="openModal(); currentSlide(45)"
+                src="photos/Food/photo4_9.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate-10 photo-10" onclick="openModal(); currentSlide(46)"
+                src="photos/Food/photo4_10.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo small-photo rotate15 photo-11" onclick="openModal(); currentSlide(47)"
+                src="photos/Food/photo4_11.jpg"
+                alt="Photo of a beautiful bug">
+            <img class="photo big-photo rotate10 photo-12" onclick="openModal(); currentSlide(48)"
+                src="photos/Food/photo4_12.jpg"
+                alt="Photo of a beautiful bug">
+        </section>
+    </main>
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_1.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_2.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_3.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_4.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_5.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_6.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_7.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_8.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_9.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_10.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Plants/photo1_11.jpg">
+            </div>
+            <div class="mySlides">
+                <img style="height:100%"
+                    src="photos/Plants/photo1_12.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_1.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_2.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_3.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_4.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_5.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_6.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_7.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_8.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_9.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_10.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Fruits/photo2_11.jpg">
+            </div>
+            <div class="mySlides">
+                <img style="height:100%"
+                    src="photos/Fruits/photo2_12.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_1.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_2.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_3.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_4.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_5.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_6.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_7.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_8.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_9.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_10.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Animals/photo3_11.jpg">
+            </div>
+            <div class="mySlides">
+                <img style="height:100%"
+                    src="photos/Animals/photo3_12.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_1.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_2.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_3.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_4.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_5.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_6.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_7.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_8.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_9.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_10.jpg">
+            </div>
+            <div class="mySlides">
+                <img src="photos/Food/photo4_11.jpg">
+            </div>
+            <div class="mySlides">
+                <img style="height:100%"
+                    src="photos/Food/photo4_12.jpg">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="photos.js"></script>
+</body>
+
+</html>
