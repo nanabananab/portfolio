@@ -1,299 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <title>Natalia's Personal Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Mystery+Quest&display=swap');
-      @font-face {
-            font-family: 'Roboto';
-            src: url('Roboto-Light-webfont.woff') format('woff');
-            font-style: normal;
-            font-weight: 300;
+        :root {
+            --background-color: rgb(252, 250, 248);
+            --text-color: #374A12;
+            --dark-pink: #F87375;
+            --light-grey: #C1BFAF;
+            --red: #E1292D;
+            --green: #5F6D33;
+            --pink: rgb(233, 183, 169);
         }
 
-        @font-face {
-            font-family: 'Roboto';
-            src: url('Roboto-LightItalic-webfont.woff') format('woff');
-            font-style: italic;
-            font-weight: 300;
+        /* Base reset */
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        @font-face {
-            font-family: 'Roboto';
-            src: url('Roboto-Bold-webfont.woff') format('woff');
-            font-style: normal;
-            font-weight: 700;
+        /* box-sizing and font sizing */
+        *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
         }
-      * {  
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body{
-        overflow:hidden;
-        margin: 0;
-        --background-color: rgb(252, 250, 248);
-        --text-color: #374A12;
-        --nav-background: #F87375;
-        --project-background:#374A12;
-        --project-text: rgb(226, 171, 155);
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-size: 100%;
-        font-family: 'Roboto', sans-serif;
-      }
-      h1, h2, figcaption, .nav-link {
-        font-family: 'Mystery Quest', cursive;
-      }
 
-      #navbar {
-        width: 100vw;
-        height: 80px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 20px;
-        background-color: var(--nav-background);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      }
-      .nav-link {
-        padding: 5px;
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .nav-link a {
-        color: var(--text-color);
-      }
-      #portfolio {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        height: calc(100vh - 80px);
-      }
-      #welcome-section{
-        display: grid;
-        grid-template-columns: 1fr 700px 1fr;
-      }
-      #avatar img{
-        width:235px;
-        border-radius: 50%;
-        border-width: 9px;
-        border-style: solid;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-
-      }
-      #projects-wraper {
-        max-width: 700px;
-        margin:0 auto;
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        padding: 0;
-        grid-gap: 20px;
-        justify-items: center;
-        align-items: center;
-      }
-      .project {
-        margin: 0;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-      }
-      .project img {
-        object-fit: cover;
-        display: block;
-        width: 210px;
-        height: 200px;
-        border-radius: 5px 5px 0px 0px;
-      }
-      .project figcaption {
-        padding: 5px;
-        text-align: center;
-        font-weight: bold;
-        border-radius: 0px 0px 5px 5px;
-        color: var(--project-text);
-        background-color: var(--project-background);
-      }
-      .prortfolio-section {
-        height: calc(100vh - 80px);
-        overflow: visible;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-      }
-      #contact-section{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #contact-header{
-        height: 50px;
-      }
-      #contact-text {
-        height: 25px;
-        font-size: 18px;
-      }
-      #contact-list {
-        display: flex;
-        justify-content: center;
+        html {
+            box-sizing: border-box;
+            /* Set font size for easy rem calculations
+           * default document font size = 16px, 1rem = 16px, 100% = 16px
+           * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+          */
+            font-size: 80%;
+            scroll-behavior: smooth;
         }
-      .contact-link {
-        font-size: 25px;
-        padding: 20px;
-        
-      }
-      .contact-link a{
-        color: var(--text-color);
-      }
-      .fa-spin-hover:hover {
-            animation: fa-spin 2s infinite linear;
-      }
-      #khan-academy-img {
-        width: 30px;
-        float: left; 
-        border-radius: 50px;
-      }
-      h1 {
-        text-align: center;
-      }
-      #projects-heading {
-        text-align: center;
-        padding-top: 20px;
-      }
 
-     .zoom {
-      transition: transform .2s; /* Animation */
-    }
+        body *{
+            color: var(--text-color);
+           
+        }
+        .page {
+            display: grid;
+            grid-template-rows: 10% 1fr;
+            height: 100vh;
+            background-color: var(--background-color);
+        }
 
-    .zoom:hover {
-      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    }
-    .hover:hover {
-      color: var(--background-color);
-    }
-    a {
-      text-decoration: none;
-    }
+        .details {
+            display: grid;
+            grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+            scroll-snap-type: y mandatory;
+
+        }
+
+        .subpanel {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+            margin: 0;
+            padding: 0;
+        }
+
+        .panel {
+            overflow: auto;
+        }
+
+        menu-link a,
+        h1,
+        h2 {
+            font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300)));
+            line-height: 2em;
+
+        }
+
+   
+        #welcome-section {
+            display: grid;
+            grid-template-columns: 1fr 700px 1fr;
+            grid-template-rows: auto;
     
-    </style>
-  </head>
-  <body>
-      <nav id="navbar">
-        <div class="nav-link zoom">
-          <a class="hover" href="#welcome-section">About</a>
-        </div>
-        <div class="nav-link zoom">
-          <a class="hover" href="#projects">Work</a>
-        </div>
-        <div class="nav-link zoom">
-          <a class="hover" href="#contact-section">Contact</a>
-        </div>
-      </nav>
-      <main id="portfolio">
-        <section id="welcome-section" class="prortfolio-section">
-          <figure id="avatar">
-            <img src="https://raw.githubusercontent.com/nanabananab/portfolio/master/avatar_Natalia_new.png" alt="avatar" width="235px">
-          </figure>
-          <div id="cv">
-            <h1>Hello, I am Natalia</h1>
-            <p>I was born in 2009 and at the age of 9 I started learning computer programming. I am learning computer programming because it is my passion, I love to code, and create new applications.The other reason is that I need no university for that and I am going to be able to make all fun apps, webpages and animations of my dreams!!!</p>
-            <h2>Technologies</h2>
-            <ul>
-              <li>JavaScript: ES6, Processing JS,</li>
-              <li>HTML: HTML5,</li>
-              <li>CSS: CSS Flexbox, CSS Grid,</li>
-              <li>Responsive Web Design Principles.</li>
-            </ul>
-            <h2>Foreign Lenguages</h2>
-            <p>I am fluent in English, Spanish and Polish.</p>
-            <h2>Hobbies</h2>
-            <ul>
-              <li>Dancing</li>
-              <li>Cycling</li>
-              <li>Drawing</li>
-              <li>Swimming</li>
-              <li>Coding</li>
-              <li>Writing</li>
-            </ul>
-          </div>
-        </section>
-        <section id="projects" class="prortfolio-section">
-          <h2 id="projects-heading">These are my projects</h2>
-          <div id="projects-wraper">
-            <a href="">
-              <figure class="project zoom">
-                <img src="https://screenshot.codepen.io/3538753.wvwOBjE.fe0a49df-3dc3-44f6-9b81-103972641930.png" alt="project-image">
-                <figcaption class="hover">Book Reviews</figcaption>
-              </figure>
-            </a>
-            <a href="">
-            <figure class="project zoom">
-              <img src="https://screenshot.codepen.io/3538753.dybxjmJ.b6bf85a8-9250-4f75-a7b0-0b30f3547235.png" alt="project-image">
-              <figcaption class="hover">HTML Basics</figcaption>
-            </figure>
-          </a>
-          <a href="">
-            <figure class="project zoom">
-              <img src="https://screenshot.codepen.io/3538753.XWreQxz.528a6e5c-ddf9-400b-84f3-af62b1c32a63.png" alt="project-image">
-              <figcaption class="hover">Book & Movie Survey</figcaption>
-            </figure>
-          </a>
-          <a href="">
-            <figure class="project zoom">
-              <img src="https://screenshot.codepen.io/3538753.mdbMKEE.5495492e-f746-4647-a762-5ce5c0ef9b81.png" alt="project-image">
-              <figcaption class="hover">Harry Potter</figcaption>
-            </figure>
-          </a>
-          <a href="">
-            <figure class="project zoom">
-              <img src="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080/5761206135914496.png" alt="project-image">
-              <figcaption class="hover">Kaleidoscope</figcaption>
-            </figure>
-          </a>
-          <a href="">
-            <figure class="project zoom">
-              <img src="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912/6387914281156608.png" alt="project-image">
-              <figcaption class="hover">Animal Attack</figcaption>
-            </figure>
-          </a>
-        </div>
-        </section>
-        <section id="contact-section" class="prortfolio-section">
-          <h2 id="contact-header">Contact</h2>
-          <p id="contact-text">Choose a way to stay in touch</p>
-          <div id="contact-list"> 
-            <div class="contact-link zoom">
-              <a href="mailto:https//mail.google.com/mail/u/0/?pli=1#inbox">
-                <i class="fa fa-envelope fa-spin-hover"></i>
-                bananataliab@gmail.com
-              </a>
-            </div>
-            <div class="contact-link zoom">
-              <a href="https://github.com/nanabananab?tab=repositories">
-                <i class="fa fa-github fa-spin-hover"></i>
-                Github
-              </a>
-            </div>
-            <div class="contact-link zoom">
-              <a href="https://learn.freecodecamp.org/">
-                <i class="fa fa-free-code-camp fa-spin-hover"></i>
-                FreeCodeCamp
-            </a>
-          </div>
-          <div class="contact-link zoom">
-            <a  target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
-              <i class="fa">
-                <span id="khan-academy-label">
-                  <img id="khan-academy-img" class="fa fa-spin-hover" src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
-                  Khan Academy
-                </span>
-                </i>
-            </a>
-          </div>
-          </div>
-        </section>
-      </main>
+            grid-column-gap: 60px;
+        }
+        #avatar-img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border-color: var(--green);
+            border-width: 8px;
+            border-style: solid;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            margin: 10px;
+        }
+        #cv {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 10;
+            width: 100%;
+            height: 100%;
+            font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
+            
+        }
+        #contact-p {
+            font-size: 19px;
+        }
 
-  </body>
+        #cv ul {
+            margin-left: 20px;
+        }
+
+        #avatar-wraper {
+            width: 100%;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        #welcome-header {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+        }
+
+
+        #contact {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .menu-link a {
+            font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1600 - 300))) !important;
+        }
+        #navbar {
+            background: var(--dark-pink);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            line-height: 2em;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        #navbar a {
+            font-weight: bold;
+            margin: 0px;
+            padding: 5px;
+            transition: .3s;
+            text-decoration: none;
+        }
+        #cv h3 {
+            margin-top: 20px;
+
+        }
+
+        #contact h2 {
+            margin-bottom: 70px;
+        }
+        #projects-wraper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            justify-items: center;
+            grid-gap: 25px 25px;
+          
+       } 
+       #projects {
+            margin: 0 auto;
+            max-width: 700px;
+       }
+       .project {
+           display: block;
+           width: 200px;
+           height: 235px;    
+       }
+       .fig-img {
+           width: 200px;
+           box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+       }
+       .project-image{
+          width: 200px;
+          height: 200px;
+          display: block;
+          object-fit: cover;
+          border-radius: 4px 4px 0px 0px;
+        }
+  
+
+        
+        .project-title {
+            background-color: var(--green);
+            color: var(--pink);
+            width: 200px;
+            height: 35px;
+            border-radius: 0px 0px 4px 4px; 
+            font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;	
+            font-weight: bold;
+        }
+        .project-link, .link-label {
+            text-decoration: none;
+        }
+
+        .fa-spin-hover:hover {
+            animation: fa-spin 2s infinite linear;
+        }
+   
+        .contact-label {
+            font-size: 20px;
+        }
+       
+
+            /* Tablet Styles */
+        @media (min-width: 401px) and (max-width: 960px) {
+
+            .details {
+            grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+            }
+
+            #welcome-section {
+                max-width: 95%;
+                grid-template-columns: 30% 2fr ;
+                grid-column-gap: 10px;
+            }
+            #cv {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 10;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 400px) {
+        body,  page, panel{
+                width: 100vw;
+            }
+            #welcome-section {
+                grid-template-columns: 20% 2fr;
+                grid-template-rows: 180px 1fr;
+                grid-gap: 10px;
+                grid-row-gap: 0px;
+         
+            }
+            .details {
+                width: 95vw;
+                margin: 0 auto;
+            }
+            #cv {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            #avatar-wraper {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            height: 180px;
+            }
+            .details {
+            grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+            }
+
+            #welcome-section {
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+          .subpanel {
+        
+            scroll-snap-stop: proximity;
+
+             }       
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <nav id="navbar" class="panel">
+            <div class="menu-link"><a href="#welcome-section"><span>About</span></a></div>
+            <div class="menu-link"><a href="#projects"><span>Work</span></a></div>
+            <div class="menu-link" ><a href="#contact"><span>Contact</span></a></div>
+        </nav>
+
+        <div class="details panel">
+            <section id="welcome-section" class="subpanel">
+                <figure id="avatar-wraper">
+                    <img id="avatar-img"
+                        src="https://raw.githubusercontent.com/nanabananab/portfolio/master/avatar_Natalia_new.png"
+                        alt"Avatar Image">
+                </figure>
+                <header id="welcome-header">
+                    <h1>Hello, I am Natalia,</h1>
+                </header>
+
+                <div id="cv">
+                  
+                    <p>I was born in 2009 and at the age of 9 I started learning computer programming. I am learning computer programming because it is my passion, I love to code, and create new applications.The other reason is that I need no university for that and I am going to be able to make all fun apps, webpages and animations of my dreams!!!</p>
+                    
+                    <h2>Technologies</h2>
+                    <ul id="skill-list">
+                        <li>JavaScript: ES6, Processing JS,</li>
+                        <li>HTML: HTML5,</li>
+                        <li>CSS: CSS Flexbox, CSS Grid,</li>
+                        <li>Responsive Web Design Principles.</li>
+                    </ul>
+                    <h2>Foreign Lenguages</h2>
+                    <p>I am fluent in English, Spanish and Polish.</p>
+
+
+
+                </div>
+            </section>
+
+
+            <section id="projects" class="subpanel">
+                <h2 id="work">These are my projects</h2>
+                <div id="projects-wraper">
+                    <div class="project">
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/wvwOBjE" target="_blank" >
+                            <figure class="fig-img">
+                                <img class="project-image" src="https://screenshot.codepen.io/3538753.wvwOBjE.fe0a49df-3dc3-44f6-9b81-103972641930.png" alt="project">
+                                <figcaption class="project-title">
+
+                                    Book Reviews 
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/dybxjmJ" target="_blank">
+                                <figure class="fig-img">
+                                    <img class="project-image" src="https://screenshot.codepen.io/3538753.dybxjmJ.b6bf85a8-9250-4f75-a7b0-0b30f3547235.png" alt="project">
+                                    <figcaption class="project-title">
+    
+                                        HTML Basics
+    
+                                    </figcaption>
+                                </figure>
+                            </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/XWreQxz" target="_blank" >
+                            <figure class="fig-img">
+                                <img class="project-image" src="https://screenshot.codepen.io/3538753.XWreQxz.528a6e5c-ddf9-400b-84f3-af62b1c32a63.png" alt="project">
+                                <figcaption class="project-title">
+
+                                    Book & Movie Survey  
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link" href="https://codepen.io/my_mangosteen/full/mdbMKEE" target="_blank" >
+                            <figure class="fig-img">
+                                <img class="project-image" src="https://screenshot.codepen.io/3538753.mdbMKEE.5495492e-f746-4647-a762-5ce5c0ef9b81.png" alt="project">
+                                <figcaption class="project-title">
+
+                                    Harry Potter  
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link" href="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080" target="_blank" >
+                            <figure class="fig-img">
+                                <img class="project-image" src="https://www.khanacademy.org/computer-programming/kaleidoscope/6695962130350080/5761206135914496.png" alt="project">
+                                <figcaption class="project-title">
+
+                                    Kaleidoscope 
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-link" href="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912" target="_blank" >
+                            <figure class="fig-img">
+                                <img class="project-image" src="https://www.khanacademy.org/computer-programming/spin-off-of-project-animal-attack/5355868561702912/6387914281156608.png" alt="project">
+                                <figcaption class="project-title">
+
+                                    Animal Attack   
+
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <footer id="contact" class="subpanel">
+                <h2>Contact</h2>
+                <p id="contact-p">Choose a way to stay in touch</p>
+                    <a class="link-label" target="_blank" href="mailto:https://mail.google.com/mail/u/0/?pli=1#inbox">
+                    <i class="fa fa-envelope fa-2x fa-spin-hover"></i>
+                    <span class="contact-label">bananataliab@gmail.com</span>
+                    </a>
+                    <br>
+                    <a class="link-label" target="_blank" href="https://github.com/nanabananab?tab=repositories">
+                        <i class="fa fa-github fa-2x fa-spin-hover"></i>
+                        <span class="contact-label">Github</span>
+                    </a>
+                    <br>
+                    <a class="link-label" target="_blank" href="https://learn.freecodecamp.org/">
+                        <i class="fa fa-free-code-camp fa-2x fa-spin-hover"></i>
+                        <span class="contact-label" >FreeCodeCamp</span>
+                    </a>
+                    <br>
+                    <a class="link-label" target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
+                        <i class="fa fa-spin-hover">
+                            <img id="khan-academy-img" style="width: 40px; float: left; border-radius: 50px;" src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
+                        </i>
+                        <span class="contact-label" id="khan-academy-label">Khan Academy</span>
+                    </a>
+            </footer>
+        </div>
+        <!--details-->
+    </div>
+    <!--page-->
+   
+</body>
+
 </html>
