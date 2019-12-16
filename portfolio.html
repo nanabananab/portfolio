@@ -78,10 +78,11 @@
             background-color: var(--background-color);
             border-style: dashed;
             border: 3px;
+            overflow-y: hidden;
         }
 
         .details {
-            width: 100vw;
+           
             display: grid;
             grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
            /* scroll-snap-type: y mandatory;*/
@@ -92,11 +93,11 @@
             scroll-snap-stop: always;*/
             margin: 0;
             padding: 0;
-            width: 100vw;
+       
         }
 
         .panel {
-            width: 100vw;
+      
             overflow: auto;
         }
 
@@ -174,7 +175,7 @@
         }
 
         #navbar {
-            width: 100vw;
+      
             background: var(--dark-pink);
             display: flex;
             justify-content: flex-end;
@@ -277,13 +278,12 @@
 
             
         menu-link a {
-            font-size: 4vw;
+            font-size: 5vw;
             line-height: 2em;
         }
 
             .page {
                 width: 100vw;
-                background-color: red;
             }
 
             #cv {
