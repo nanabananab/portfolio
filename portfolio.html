@@ -187,7 +187,7 @@
             display: block;
             width: 10em;
             height: 12em;
-           
+
         }
 
         .project-image {
@@ -221,83 +221,50 @@
 
         .fa-spin-hover:hover {
             animation: fa-spin 2s infinite linear;
+            font-size: 4vw;
         }
 
         .contact-label {
             font-size: 2em;
         }
 
+        #khan-academy-img {
+            width: 40px; 
+            float: left; 
+            border-radius: 50px;
+        } 
 
         /* Tablet Styles */
 
-        @media (min-width: 401px) and (max-width: 960px) {
+   
 
-            body,
-            .page,
-            .panel {
-                width: 100vw;
+        @media (orientation: portrait) {
 
-            }
-
-
-            .details {
-                grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
-            }
-
-            #welcome-section {
-                max-width: 95%;
-                grid-template-columns: 30% 2fr;
-                grid-column-gap: 10px;
+            .page {
+                background-color: red;
             }
 
             #cv {
-                grid-column-start: 2;
-                grid-column-end: 4;
-                grid-row-start: 2;
-                grid-row-end: 10;
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        }
 
-        /* Mobile Styles */
-
-        @media (max-height: 400px) {
-            .page {
-                background-color: red;
+                font-size: 4vw;
             }
 
-        }
-
-        @media (max-width: 400px) {
-
-            body,
-            .page,
-            .panel {
-                width: 100vw;
-
-            }
-
-            .page {
-                background-color: red;
+            #welcome-header h1 {
+                font-size: 4vw;
+                padding-left: 1em;
             }
 
             #welcome-section {
                 grid-template-columns: 20% 2fr;
-                grid-template-rows: 180px 1fr;
-                grid-gap: 10px;
+                grid-template-rows: 7em 1fr;
+                grid-gap: 3em;
                 grid-row-gap: 0px;
 
             }
 
-            .details {
-                width: 95vw;
-                margin: 0 auto;
-            }
-
             #cv {
-                grid-column-start: 1;
-                grid-column-end: 4;
+                grid-column-start: 2;
+                grid-column-end: 3;
                 grid-row-start: 2;
                 grid-row-end: 3;
                 padding-left: 10px;
@@ -308,27 +275,65 @@
                 grid-column-start: 1;
                 grid-column-end: 2;
                 grid-row-start: 1;
-                grid-row-end: 2;
+                grid-row-end: 3;
                 height: 180px;
             }
 
-            .details {
-                grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
+            h1 {
+                padding: 3vw;
+            }
+            h2{
+                font-size: 5vw;
+                padding: 5vw;
+            }
+       
+            #projects {
+                max-width: 100%;
+                padding: 2em;
+                margin: 0 ;
+
             }
 
-            #welcome-section {
-                grid-row-start: 1;
-                grid-row-end: 3;
-            }
-
-            .subpanel {
-
-                scroll-snap-stop: proximity;
+            .project {
+                width: 18em;
+                height: 25em;
 
             }
+
+            .project-image {
+                width: 18em;
+                height: 20em;
+
+            }
+
+
+
+            .project-title {
+                width: 100%;
+                height: 5em;
+                font-size: 85%;
+            }
+
+            
+        .contact-label {
+            font-size: 4em;
+        }
+
+        .fa-spin-hover {
+            font-size: 5vw;
+        }
+
+        #khan-academy-img {
+            width: 6vw; 
+            float: left; 
+            border-radius: 50px;
+            
+        } 
+
 
 
         }
+
         /*
         @media (min-height: 601px) {
             #cv {
@@ -501,23 +506,23 @@
             <footer id="contact" class="subpanel">
                 <h2>Contact</h2>
                 <a class="link-label" target="_blank" href="mailto:bananataliab@gmail.com">
-                    <i class="fa fa-envelope fa-2x fa-spin-hover"></i>
+                    <i class="fa fa-envelope fa-spin-hover"></i>
                     <span class="contact-label">bananataliab@gmail.com</span>
                 </a>
                 <br>
                 <a class="link-label" target="_blank" href="https://github.com/nanabananab?tab=repositories">
-                    <i class="fa fa-github fa-2x fa-spin-hover"></i>
+                    <i class="fa fa-github fa-spin-hover"></i>
                     <span class="contact-label">Github</span>
                 </a>
                 <br>
                 <a class="link-label" target="_blank" href="https://learn.freecodecamp.org/">
-                    <i class="fa fa-free-code-camp fa-2x fa-spin-hover"></i>
+                    <i class="fa fa-free-code-camp fa-spin-hover"></i>
                     <span class="contact-label">FreeCodeCamp</span>
                 </a>
                 <br>
                 <a class="link-label" target="_blank" href="https://www.khanacademy.org/profile/Nati001/projects">
                     <i class="fa fa-spin-hover">
-                        <img id="khan-academy-img" style="width: 40px; float: left; border-radius: 50px;"
+                        <img id="khan-academy-img"
                             src="https://shortyawards.imgix.net/entries/8th/screen-shot-2016-02-03-at-42123-p.png?auto=format&fit=crop&h=400&q=65&w=400&s=61b7e129655ea404d8656cc4eeee3fdf">
                     </i>
                     <span class="contact-label" id="khan-academy-label">Khan Academy</span>
