@@ -63,7 +63,7 @@
         html {
             box-sizing: border-box;
             font-size: 1.5vw;
-            /*scroll-behavior: smooth;*/
+            scroll-behavior: smooth;
         }
 
         body * {
@@ -74,14 +74,12 @@
             display: grid;
             grid-template-rows: 10% 1fr;
             height: 100vh;
-            width: 100vw;
             background-color: var(--background-color);
             border-style: dashed;
             border: 3px;
         }
 
         .details {
-            width: 100vw;
             display: grid;
             grid-template-rows: calc(100vh - 10%) calc(100vh - 10%) calc(100vh - 10%);
            /* scroll-snap-type: y mandatory;*/
@@ -92,11 +90,9 @@
             scroll-snap-stop: always;*/
             margin: 0;
             padding: 0;
-            width: 100vw;
         }
 
         .panel {
-            width: 100vw;
             overflow: auto;
         }
 
@@ -174,7 +170,6 @@
         }
 
         #navbar {
-            width: 100vw;
             background: var(--dark-pink);
             display: flex;
             justify-content: flex-end;
@@ -276,7 +271,7 @@
         @media (orientation: portrait) {
 
             .page {
-                width: 100vw;
+
                 background-color: red;
             }
 
